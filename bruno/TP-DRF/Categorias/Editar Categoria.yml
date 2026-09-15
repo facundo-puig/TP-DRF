@@ -1,0 +1,23 @@
+info:
+  name: Editar Categoria
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{baseUrl}}/gastos/categorias/1/"
+  body:
+    type: json
+    data: |-
+      {
+          "nombre": "Comida",
+          "descripcion": "Supermercado, restaurantes y delivery"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

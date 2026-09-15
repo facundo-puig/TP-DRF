@@ -1,0 +1,23 @@
+info:
+  name: Crear Categoria
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{baseUrl}}/gastos/categorias/"
+  body:
+    type: json
+    data: |-
+      {
+          "nombre": "Comida",
+          "descripcion": "Supermercado y restaurantes"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
